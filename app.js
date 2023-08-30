@@ -27,6 +27,19 @@ app.set('view engine', 'handlebars');
 // URL ROUTES
 // ----------
 
+
+
+app.get('/', (req, res) => {
+
+    let homePageData = {
+        'price': 31.25,
+        'wind': 2,
+        'temperature': 18
+    }
+    res.render('index', homePageData)
+
+});
+
 // START THE LISTENER 
 app.listen(PORT);
 console.log('Server started and it will listen TCP port', PORT);
