@@ -23,7 +23,6 @@
     {{!-- Loop must end with {{/each tag}}, btw this is a handlebars comment --}}
     {{/each}}
 </table>
-
 <p>{{chartData}}</p>
 <div>
     <br>
@@ -34,12 +33,12 @@
 <canvas id="hourlyChartChartJS" style="width:100%;max-width:400px"></canvas>
 
 <script>
-    const xValues = ["maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", ];
-    const yValues = [0, 100];
+    const xValues = ["13", "14", "15", "16", "17"];
+    const yValues = [10, 8, 10, 14, 15];
     const barColors = ["blue", "green", "blue", "red", "red"];
 
     new Chart("hourlyChartChartJS", {
-        type: "line",
+        type: "bar",
         data: {
             labels: xValues,
             datasets: [{
@@ -48,9 +47,9 @@
             }]
         },
         options: {
-            legend: { display: true },
+            legend: { display: false },
             title: {
-                display: true,
+                display: false,
                 text: "Sähkön tuntihinnat"
             }
         }
@@ -61,7 +60,7 @@
     <br>
 </div>
 
-{{!-- Create a named element as a placeholder for the Google chart 
+{{!-- Create a named element as a placeholder for the Google chart --}}
 <div id="hourlyChartGoogleChart"></div>
 
 <script type="text/javascript">
@@ -95,6 +94,5 @@
 
         var chart = new google.visualization.ColumnChart(document.getElementById("hourlyChartGoogleChart"));
         chart.draw(view, options);
-    }
-    --}}
+    }   
 </script>  
