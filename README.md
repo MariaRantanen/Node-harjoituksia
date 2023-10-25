@@ -1,7 +1,7 @@
-#NodeHarjoituksia
+# NodeHarjoituksia
 Web-palvelinten toimintaan liittyviä esimerkkejä toteutettuna Node.js kirjaston avulla
 
-#Tietokanta ja näkymät
+# Tietokanta ja näkymät
 Luodaan näkymä, joka laskee edellisen kuukauden hinnan keskiarvon, normaalihinnan ala- ja ylärajat keskihajonnan perusteella. Jaetaan vaatimukset tehtäviksi tyyliin:
 
 Selvitä kuluva vuosi ja kuukausi
@@ -12,7 +12,7 @@ Muokkaa kyselyä siten, että se laskee ala- ja ylärajat (keskihinta +/- keskih
 Muuta näkymäksi, joka hyödyntää month_lookup-taulua.
 Luodaan näkymä, joka näyttää tiedot edelliseltä vuodelta, mutta kuluvalta kuukaudelta
 
-#Mikropalvelu datan hakemiseen ja tallentamiseen
+# Mikropalvelu datan hakemiseen ja tallentamiseen
 Microservice2 drawio TÄSTÄ PUUTTUU KUVA
 
 Käyttäjät muodostavat yhteyden web-palvelimeen, joka on node-prosesessi. Koska samanaikaisia käyttäjiä voi olla useita, käytetään pääasiassa asynkronista koodia, jotta jonkin käyttäjän käynnistämä pitkäkestoinen operaatio ei hidasta muiden käyttäjien operaatioita. Taustapalveluna toimivaa microservice.js node.js ohjelmaa ajetaan erikseen, jolloin se on tietokoneessa oma prosessinsa. Se voidaan tarvittaessa sijoittaa eri tietokoneeseen. Koska käyttäjät eivät suoraan pääse ohjaamaan tätä prosessia, koodi voi olla synkronista, jolloin sen kirjoittaminen on yksinkertaista ja koodista tulee myös lyhyempää ja helpommin hallittavaa.
@@ -21,15 +21,15 @@ Käyttäjät muodostavat yhteyden web-palvelimeen, joka on node-prosesessi. Kosk
 
 Node.js palvelin voi tehdä ajastettuja toimintoja. Selvitä, mitä kirjastoja voisi käyttää tähän tarkoitukseen. Luodaan palvelu, joka lukee päivittäin klo 15.30 hinnat ja tallentaa ne tietokantaan. Jos ei onnistu, yritetään uudelleen tunnin kuluttua.
 
-##Node.js ajastin (scheduler)
+## Node.js ajastin (scheduler)
 Jakakaa projektiryhmässä työt: kuka katsoo mitäkin työkalua tai kirjastoa. Lisätkää ne kortteina Githubin projektinhallintaan. Laittakaa tutkimiinne kirjastoihin kommentteina mielipide: "jatkoon, ei jatkoon" ja lyhyt perustelu miksi.
 
-#PostgreSQL-kirjasto
+# PostgreSQL-kirjasto
 Selvittäkää, mitä työkaluja / kirjastoja voisi käyttää tiedon hakemiseen ja tallentamiseen Node-sovelluksesta PostgreSQL-tietokantaan. Jakakaa tehtävät ja kirjatkaa projektinhallintaan. Mielipiteet kuten edellisessä tehtävässä.
 
 Tehtävä: Rakenna palvelu valmiiksi niin, että se pystyy hakemaan päivittäin hintatiedot porssisahko.net-palvelusta ja tallentamaan ne tietokantaan. Esimerkkikoodissa haku- ja tallennustapahtumat kaiutetaan konsoliin. Todellisessa palvelimessa ne halutaan kirjoittaa lokitiedostoon. Lisää koodiin kirjoitus tiedostoon (append) fs-kirjaston avulla.
 
-#Pikadokumentaatio
+# Pikadokumentaatio
 Seuraavasta taulukosta löytyvät tämän projektin tärkeimmät tiedostot ja hakemistot:
 
 | Tiedosto tai kansio |	Käyttötarkoitus |
@@ -71,3 +71,4 @@ Sivujen sisällön luomiseksi ja renderöimiseksi luodaan omat moduulit. Moduuli
 getHomePageData.js | Lukee tietokannasta nykyisen sähkön tuntihinnan, tuulen nopeuden ja lämpötilan.
 Lämpötila ja tuuli lisätään myöhemmin
 hourlyPageData.js | Lukee tietokannasta päivän tuntihinnat
+createGraphics.js | Lukee tietokannasta ja dataa ja muodostaa kaaviot: päivä, hintakehitys viikko ja kuukausi taaksepäin. 
