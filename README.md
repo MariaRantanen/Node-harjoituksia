@@ -68,7 +68,6 @@ Sivujen sisällön luomiseksi ja renderöimiseksi luodaan omat moduulit. Moduuli
 
 | Tiedosto | Tarkoitus | Tekijä / Tekijät |
 |---|---|---|
-getHomePageData.js | Lukee tietokannasta nykyisen sähkön tuntihinnan, tuulen nopeuden ja lämpötilan.
-Lämpötila ja tuuli lisätään myöhemmin
+getHomePageData.js | Lukee tietokannasta nykyisen sähkön tuntihinnan, tuulen nopeuden ja lämpötilan. Lämpötila ja tuuli lisätään myöhemmin
 hourlyPageData.js | Lukee tietokannasta päivän tuntihinnat
 createGraphics.js | Lukee tietokannasta ja dataa ja muodostaa kaaviot: päivä, hintakehitys viikko ja kuukausi taaksepäin. 
