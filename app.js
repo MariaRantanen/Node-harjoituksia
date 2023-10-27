@@ -43,8 +43,8 @@ app.get('/', (req, res) => {
 
     cprice.getCurrentPrice().then((resultset) => {
         console.log()
-        homePageData.price = resultset.rows[0]
-    })
+        homePageData.price = resultset.rows[0]['price'];
+    });
 
     // Render index.handlebars and send dynamic data to the page
     res.render('index', homePageData);
@@ -94,7 +94,7 @@ app.get('/chart', (req, res) => {
 
 });
 
-app.get('/test', (req, res) => {
+app.get('/graph', (req, res) => {
 
     // Data will be presented in a bar chart. Data will be sent as JSON array
     let tableHours = [12, 13, 14, 15, 16];
@@ -103,7 +103,7 @@ app.get('/test', (req, res) => {
     let jsonTablePrices = JSON.stringify(tablePrices)
     let chartPageData = { 'hours': jsonTableHours, 'prices': jsonTablePrices };
 
-    res.render('testCJSv4', chartPageData)
+    res.render('graph', chartPageData)
 
 });
 

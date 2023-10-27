@@ -9,3 +9,8 @@ CREATE VIEW public.avg_price_by_weekday_name AS
     public.average_by_weekday_num
   WHERE ((weekday_lookup.weekday_number)::numeric = average_by_weekday_num.vpnumero)
   ORDER BY average_by_weekday_num.vpnumero;
+
+
+ALTER TABLE public.avg_price_by_weekday_name OWNER TO postgres;
+
+
