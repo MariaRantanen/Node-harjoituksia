@@ -28,12 +28,14 @@ Jakakaa projektiryhmässä työt: kuka katsoo mitäkin työkalua tai kirjastoa. 
 Selvittäkää, mitä työkaluja / kirjastoja voisi käyttää tiedon hakemiseen ja tallentamiseen Node-sovelluksesta PostgreSQL-tietokantaan. Jakakaa tehtävät ja kirjatkaa projektinhallintaan. Mielipiteet kuten edellisessä tehtävässä.
 
 **Tehtävä1:**
+
 Rakenna palvelu valmiiksi niin, että se pystyy hakemaan päivittäin hintatiedot porssisahko.net-palvelusta ja tallentamaan ne tietokantaan. Esimerkkikoodissa haku- ja tallennustapahtumat kaiutetaan konsoliin. Todellisessa palvelimessa ne halutaan kirjoittaa lokitiedostoon. Lisää koodiin kirjoitus tiedostoon (append) fs-kirjaston avulla.
 
 ## Dynaamista dataa käyttävät sivut
 Alkuvaiheessa **handlebars**-sivuille oli upotettu dataa taulukoiden ja kaavioiden piirtämiseksi.
 
 **Tehtävä2:**
+
 Muuta sivujen data dynaamiseksi, siten että `app.js` renderöi sivut käyttäen tietokantaan tallennettuja näkymiä. Tee seuraavat sivut:
 1. Kotisivu -> tuntihinta saadaan tietokannasta (tehty)
 2. Tunneittain sivu -> taulukko päivistä, tunneista ja hinnoista saadaan tietokannasta (tehty)
