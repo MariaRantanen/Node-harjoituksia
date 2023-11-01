@@ -39,7 +39,19 @@ Alkuvaiheessa **handlebars**-sivuille oli upotettu dataa taulukoiden ja kaavioid
 Muuta sivujen data dynaamiseksi, siten että `app.js` renderöi sivut käyttäen tietokantaan tallennettuja näkymiä. Tee seuraavat sivut:
 1. Kotisivu -> tuntihinta saadaan tietokannasta (tehty)
 2. Tunneittain sivu -> taulukko päivistä, tunneista ja hinnoista saadaan tietokannasta (tehty)
-3.  Selvitä mitä vaihtoehtoja olisi muodostaa kaavioita dynaamisesti `app.js`:n koodissa. Hae esim. Chart.js ja node hakusanoilla ohjeita netistä. Vertaa ohjeita omaan ratkaisuumme. Tee lopuksi koodi, joka muodostaa kaavion vaatiman datan erilliseen tiedostoon `getChartData.js` ja julkaisee koodin `app.js`-tiedostossa käytettäväksi. Tuo koodi `app.js`-tiedostoon ja renderöi sivu. 
+3.  Selvitä mitä vaihtoehtoja olisi muodostaa kaavioita dynaamisesti `app.js`:n koodissa. Hae esim. Chart.js ja node hakusanoilla ohjeita netistä. Vertaa ohjeita omaan ratkaisuumme. Tee lopuksi koodi, joka muodostaa kaavion vaatiman datan erilliseen tiedostoon `getChartData.js` ja julkaisee koodin `app.js`-tiedostossa käytettäväksi. Tuo koodi `app.js`-tiedostoon ja renderöi sivu.
+
+**Tehtävä3:**
+
+Sovelluksen rakentaminen jatkuu puuttuvien tietojen haku- ja tallennussovelluksen rakentamisella. Lisäksi kovakoodatut asetukset siirretään erilliseen asetustiedostoon. Sovi ryhmässä kuka rakentaa minkäkin moduulin ja miten ne nimetään. 
+1. Lisää `microservice.js`-moduuliin asetusten tallennus tiedostoon. Käytä JSON-muotoa. Asetuksissa määritellään seuraavat asiat:
+   - kellon aika, josta eteenpäin tietoja haetaan sekä tietokantapalvelimen asetukset
+2. Yhdistä aiemmin luodut kyselyfunktiot yhteen tiedostoon. Sen pitää myös lukea tietokantayhteyden asetukset em. asetustiedostosta.
+3. Selvittäkää, miten Ilmatieteenlaitoksen (FMI) avoimesta datasta saa nykyisen lämpötilan ja tuulen nopeuden. Tee niiden hakuun oma sovellus käyttämällä mallina `microservice.js`-moduulia.
+4. Rakentakaa tietokantaan tarvittavat taulut ja näkymät säätietojen tallentamiseen. 
+
+
+   
 # Pikadokumentaatio
 Seuraavasta taulukosta löytyvät tämän projektin tärkeimmät tiedostot ja hakemistot:
 

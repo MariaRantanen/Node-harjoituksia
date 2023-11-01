@@ -6,8 +6,6 @@
 const fs = require('fs');
 
 // FUNCTION DEFINITONS
-// -------------------
-
 // Function gets message entry and log file name as arguments
 const add2log = (entry, fileName) => {
 
@@ -26,11 +24,7 @@ const add2log = (entry, fileName) => {
 };
 
 // EXPORT
-// ------
-
 module.exports = {
     add2log
 }
 
-// Testing add2log function
-// add2log('This is an informational message', 'dataOperations.log')
