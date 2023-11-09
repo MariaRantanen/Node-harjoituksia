@@ -68,22 +68,6 @@ app.get('/hourly', (req, res) => {
 
 });
 
-/*
-// Route to hourly chart page
-app.get('/chart', (req, res) => {
-
-    // Data will be presented in a bar chart. Data will be sent as JSON array to get it work on handlebars page
-    let tableHours = [12, 13, 14, 15, 16];
-    let jsonTableHours = JSON.stringify(tableHours)
-    let tablePrices = [10, 8, 10, 12, 15];
-    let jsonTablePrices = JSON.stringify(tablePrices)
-    let chartPageData = { 'hours': jsonTableHours, 'prices': jsonTablePrices };
-
-    res.render('chart', chartPageData)
-
-});
-*/
-
 // Route to hourly chart page graph.handlebars
 app.get('/graph', (req, res) => {
     cpriceChart.getCurrentPriceChartData().then((resultset) => {
