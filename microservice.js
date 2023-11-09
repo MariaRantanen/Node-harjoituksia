@@ -16,18 +16,24 @@ const getPrices = require('./getNewPrices');
 // Home made library to add messages to a log file
 const logger = require('./logger')
 
+// Module to access DB settings
+const AppSettings = require('./handleSettings')
+
 // DATABASE SETTINGS
-// ------------
+// -----------------
+const appSettings = new AppSettings('settings.json')
+const settings = appSettings.readSettings()
 
-// Create a new pool for Postgres connections
+console.log(settings.server)
+
+// Create a new pool for Postgres connections using settings file parameters
 const pool = new Pool({
-  user: 'postgres', // In production always create a new user for the app
-  password: 'Q2werty',
-  host: 'localhost', // Or localhost or 127.0.0.1 if in the same computer
-  database: 'smarthome',
-  port: 5432
-});
-
+    user: settings.user, 
+    password: settings.password,
+    host: settings.server, 
+    database: settings.db,
+    port: settings.port
+  });
 // GET, PROCESS AND SAVE DATA
 // --------------------------
 
@@ -37,6 +43,7 @@ let message = ''
 const logFile = 'dataOperations.log'
 
 // Try to run an operation in 5 minute intervals from 3 to 4 PM
+// TODO: Add time pattern to settings.json file
 cron.schedule('*/5 11 * * *', () => {
   try {
     let timestamp = new Date(); // Get the current timestamp
@@ -103,3 +110,10 @@ cron.schedule('*/5 11 * * *', () => {
     logger.add2log(message, logFile)
   }
 });
+
+// Get weather data from FMI
+// -------------------------
+
+// TODO: Get weather observations every hour + 5 min using scheduler
+
+// TODO: Get weather forecasts every hour + 5 min using scheduler
