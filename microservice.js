@@ -34,6 +34,7 @@ const pool = new Pool({
     database: settings.db,
     port: settings.port
   });
+  
 // GET, PROCESS AND SAVE DATA
 // --------------------------
 
@@ -44,7 +45,7 @@ const logFile = 'dataOperations.log'
 
 // Try to run an operation in 5 minute intervals from 3 to 4 PM
 // TODO: Add time pattern to settings.json file
-cron.schedule('*/5 11 * * *', () => {
+cron.schedule('* 14 * * *', () => {
   try {
     let timestamp = new Date(); // Get the current timestamp
     let dateStr = timestamp.toLocaleDateString(); // Take date part of the timestamp

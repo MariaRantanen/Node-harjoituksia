@@ -452,7 +452,17 @@ const xml2objectArray = async (xmlData, template) => {
 
 // Call the function, get results and then log them to the console
 xml2objectArray(xmlData, template).then(result => {
-    console.log(result)
-})
+    // console.log(result)
+    weatherData = result
+    weatherString = weatherdata[0].data
+    console.log(weatherString)
+    const cutMark1 = '/n' // Split string from newline chr
+    const cutMarks2 = ' ' // Split string by space
+    const weatherDataRows = weatherString.split(cutMark1)
+    weatherDataRows.forEach(element => {
+      trimmedElement = element.trim()
+    });
+  }
+)
 
 // TODO: Lisää esimerkki prettyPrintin käytöstä
